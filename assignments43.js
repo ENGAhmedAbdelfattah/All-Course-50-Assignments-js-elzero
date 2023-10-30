@@ -28,15 +28,17 @@ const appendData = async () => {
 
   repoData.forEach((el) => {
     const createRow = document.createElement("tr");
-
+    // repositoryName cell
     const createCellName = document.createElement("td");
     createCellName.textContent = el.repositoryName;
     createRow.appendChild(createCellName);
 
+    // stars cell
     const createCellStar = document.createElement("td");
     createCellStar.textContent = el.stars;
     createRow.appendChild(createCellStar);
 
+    // visitLink cell
     const createCellLink = document.createElement("td");
     const createVisitLink = document.createElement("a");
     createVisitLink.href = el.visitLink;
@@ -45,6 +47,7 @@ const appendData = async () => {
     createCellLink.appendChild(createVisitLink);
     createRow.appendChild(createCellLink);
 
+    // add to target on html
     tBodyElement.appendChild(createRow);
   });
 };
