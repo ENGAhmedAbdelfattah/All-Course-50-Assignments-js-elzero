@@ -1,6 +1,6 @@
 /* assignments43 */
 
-const accessToken = "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";
+const accessToken = ""; // your token from your github => steps create token here => https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 const apiUrl = "https://api.github.com/users/ElzeroWebSchool/repos?per_page=15";
 const headers = new Headers({
   Authorization: `token ${accessToken}`,
@@ -44,7 +44,6 @@ const appendData = async () => {
     createVisitLink.target = "_blank";
     createCellLink.appendChild(createVisitLink);
     createRow.appendChild(createCellLink);
-
 
     tBodyElement.appendChild(createRow);
   });
